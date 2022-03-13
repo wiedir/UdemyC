@@ -1,28 +1,39 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main()
 {
-    int height = 10;
+    int pyramide;
+    bool valid = false;
 
-    for (int i = 1; i < height + 1; i++)
+    while (!valid)
     {
-        for (int j = 0; j < i; j++)
+        printf("Enter number of lines for the pyramide [1 - 50]: ");
+        scanf("%d", &pyramide);
+        if ((pyramide >= 1) && (pyramide <= 50))
+        {
+            valid = true;
+        }
+    }
+
+    for (int z = 0; z < pyramide; z++)
+    {
+        for (int s = 0; s <= z; s++)
         {
             printf("1");
         }
-
         printf("\n");
     }
 
-    for (int i = height; i > 0; i--)
+    for (int z = pyramide - 1; z >= 0; z--)
     {
-        for (int j = 0; j < i; j++)
+        for (int s = z; s >= 0; s--)
         {
             printf("1");
         }
-
         printf("\n");
     }
 
-    return 0;
+
+   return 0;
 }

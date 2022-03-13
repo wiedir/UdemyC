@@ -6,11 +6,11 @@ int main()
 
     if ((age_jan % 2) == 0)
     {
-        printf("Jan's age is even\n");
+        printf("Jan's age is even.\n");
     }
     else
     {
-        printf("Jan's age is odd\n");
+        printf("Jan's age is odd.\n");
     }
 
     return 0;

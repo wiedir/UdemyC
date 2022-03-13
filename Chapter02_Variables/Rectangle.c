@@ -7,21 +7,23 @@ int main()
     // 2.) Compute the perimeter and area of the rectangle
     // 3.) Print the computed values to the console
 
-    float a;
-    float b;
+    // Declaration of variables
+    float a, b;
+    float peri, area;
 
-    // 1.)
-    printf("Please enter the value for a: ");
+    // step 1.)
+    printf("Input of rectangle side a: ");
     scanf("%f", &a);
-    printf("Please enter the value for b: ");
+    printf("\nInput of rectangle side b: ");
     scanf("%f", &b);
 
-    // 2.)
-    float perimeter = 2 * a + 2 * b;
-    float area = a * b;
+    // step 2.)
+    peri = 2 * (a + b);
+    area = a * b;
 
-    // 3.)
-    printf("The perimeter is: %f and the area is: %f", perimeter, area);
+    // step 3.)
+    printf("The perimeter value is: %f and the area is: %f\n", peri, area);
+
 
     return 0;
 }

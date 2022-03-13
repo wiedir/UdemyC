@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "lib.h"
 
-#include "Lib.h"
 
 int main()
 {

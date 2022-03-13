@@ -12,33 +12,42 @@ int getNumberFromUser()
     return number_from_user; // return 12;
 }
 
-int max(int number_a, int number_b)
-{
-    if (number_a < number_b)
-    {
-        return number_b;
-    }
-    else
-    {
-        return number_a;
-    }
-}
 
-int min(int number_a, int number_b)
+int max(int number_a, int number_b)
 {
     if (number_a > number_b)
     {
+        return number_a;
+    }
+    else if (number_b > number_a)
+    {
         return number_b;
     }
     else
     {
-        return number_a;
+        return 0;
     }
 }
 
+
+int min(int number_a, int number_b)
+{
+    if (number_a < number_b)
+    {
+        return number_a;
+    }
+    else if (number_b < number_a)
+    {
+        return number_b;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
 float mean(int number_a, int number_b)
 {
-    float mean = (number_a + number_b) / 2.0f;
-
-    return mean;
+    return (number_a + number_b) / 2.0f;
 }

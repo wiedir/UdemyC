@@ -1,23 +1,28 @@
 #include <stdio.h>
+#include <stdint.h>
 
-int a = 1;
-
-void func()
+uint64_t factorial(uint8_t n)
 {
-    int b = 2;
+    if (n == 1)
+    {
+        return 1;
+    }
 
-    printf("(FUNC) a = %d\n", a);
-    printf("(FUNC) b = %d\n", b);
+    return n * factorial(n - 1);
 }
+
+
 
 int main()
 {
-    int c = 3;
+    uint8_t n = 0;
 
-    func();
+    printf("Calculate faculuty of: ");
+    scanf("%hhu", &n);
 
-    printf("(MAIN) a = %d\n", a);
-    printf("(MAIN) c = %d\n", c);
+    uint64_t n_faculuty = factorial(n);
+
+    printf("%u! = %lu\n", n, n_faculuty);
 
     return 0;
 }

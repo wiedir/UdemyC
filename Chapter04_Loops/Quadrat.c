@@ -1,37 +1,34 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 
 int main()
 {
-    // Quadrat: Seitenlänge a vom User einlesen
-    // Ueberpruefe dabei, ob der User eine "gueltige" Zahl eingegeben hat
-    // Wenn nicht, gebe dem User solange die Möglichkeit die Zahl einzugeben, bis sie gültig ist
-    // Berechne den Umfang und den Flaecheninhalt des Quadrats
-    // Gebe diese Werte dann in der Konsole aus
-    // u = 4 * a
-    // a = a**2
-
-    int is_valid_number = 0;
+    // Declaration of variables
     float a;
+    float peri, area;
+    bool valid = false;
 
-    while (is_valid_number == 0)
+    // User Input
+    do
     {
-        printf("Please enter the value for a: ");
+        printf("Input of quadrat side a: ");
         scanf("%f", &a);
-
-        if (a > 0.0)
+        if (a <= 0)
         {
-            is_valid_number = 1;
+            printf("Invalid number for a!\n");
         }
         else
         {
-            printf("You entered a not valid number!\n");
+            valid = true;
         }
-    }
+    } while(!valid);
 
-    float perimeter = 4 * a;
-    float area = a * a;
+    // Calculation & Output
+    peri = 4 * a;
+    area = a * a;
 
-    printf("Permieter %f, area %f", perimeter, area);
+    printf("The perimeter value is: %f and the area is: %f\n", peri, area);
 
-    return 0;
+  return 0;
 }

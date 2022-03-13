@@ -1,26 +1,15 @@
 #include <stdio.h>
 
-void printEvenOrOdd(int number);
-
-int getNumberFromUser();
-
-int main()
-{
-    int user_number = getNumberFromUser();
-    printEvenOrOdd(user_number);
-
-    return 0;
-}
 
 void printEvenOrOdd(int number)
 {
     if ((number % 2) == 0)
     {
-        printf("Even!\n");
+        printf("Number is even!\n");
     }
     else
     {
-        printf("Odd!\n");
+        printf("Number is odd!\n");
     }
 }
 
@@ -32,4 +21,13 @@ int getNumberFromUser()
     scanf("%d", &number_from_user);
 
     return number_from_user;
+}
+
+int main()
+{
+    int user_number = getNumberFromUser();
+    printEvenOrOdd(user_number);
+
+
+    return 0;
 }

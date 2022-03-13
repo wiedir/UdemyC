@@ -53,9 +53,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter05_Functions/Debugging",
+      "cwd": "t:/C_C++/Udemy/UdemyC_Template-main/Chapter05_Functions/Debugging",
       "environment": [],
-      "program": "t:/C_C++/Udemy/UdemyC/Chapter05_Functions/Debugging/build/Debug/outDebug",
+      "program": "t:/C_C++/Udemy/UdemyC_Template-main/Chapter05_Functions/Debugging/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",

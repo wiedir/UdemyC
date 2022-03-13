@@ -2,15 +2,14 @@
 
 int main()
 {
-    int num_iterations = 3;
-    int i = 0;
+   int num_iteration = 3;
+   int i = 0;
 
-    while (i < num_iterations)
-    {
-        printf("Hello World!\n");
+   while(i < num_iteration)
+   {
+       printf("Hello World!\n");
+       i++;
+   }
 
-        i++;
-    }
-
-    return 0;
+   return 0;
 }

@@ -7,28 +7,27 @@ int main()
     float c = 1.0f;
 
     // Addition
-    c += a;
+    c += b;
     printf("%f\n", c);
 
     // Subtraction
-    c -= a;
+    c -= b;
     printf("%f\n", c);
 
     // Multiplication
-    c *= a;
+    c *= b;
     printf("%f\n", c);
 
     // Division
-    c /= a;
+    c /= b;
     printf("%f\n", c);
 
+    // Inkrementieren
     b = b + 1;
     printf("%f\n", b);
 
-    b += 1;
+    b--;
     printf("%f\n", b);
-
-    b++; // b = b + 1; <=> b += 1; <=> b++
 
     return 0;
 }

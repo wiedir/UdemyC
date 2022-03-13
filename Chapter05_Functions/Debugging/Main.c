@@ -3,8 +3,7 @@
 
 #include "Lib.h"
 
-
-int main() // added comment
+int main()
 {
     int a = getNumberFromUser();
     int b = getNumberFromUser();
