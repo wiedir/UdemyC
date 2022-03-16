@@ -53,9 +53,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter06_Pointers/Extra_06/Steering",
+      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/ContentChapter7/Exercise",
       "environment": [],
-      "program": "t:/C_C++/Udemy/UdemyC/Chapter06_Pointers/Extra_06/Steering/build/Debug/outDebug",
+      "program": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/ContentChapter7/Exercise/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
