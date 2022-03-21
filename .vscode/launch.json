@@ -53,9 +53,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/Extra_07/ArrayLib1",
+      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/ExampleExercise",
       "environment": [],
-      "program": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/Extra_07/ArrayLib1/build/Debug/outDebug",
+      "program": "t:/C_C++/Udemy/UdemyC/Chapter07_Arrays/ExampleExercise/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
