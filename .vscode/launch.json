@@ -53,9 +53,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter07_Arrays/ExampleExercise",
+      "cwd": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter07_Arrays/PostVsPreIncrement",
       "environment": [],
-      "program": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter07_Arrays/ExampleExercise/build/Debug/outDebug",
+      "program": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter07_Arrays/PostVsPreIncrement/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
