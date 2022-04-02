@@ -93,7 +93,7 @@ void sleep_console(int ms)
 #ifdef _WIN32
     Sleep((DWORD)(ms));
 #else
-    usleep(ms * 1000);
+    sleep(ms * 1000);
 #endif
 }
 
