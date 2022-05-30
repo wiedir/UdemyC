@@ -7,13 +7,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter09_CharArrays/Extra_09/StringLib2",
-      "environment": [],
-      "program": "t:/C_C++/Udemy/UdemyC/Chapter09_CharArrays/Extra_09/StringLib2/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter09_CharArrays/Extra_09/ScenePrint",
+      "program": "t:/C_C++/Udemy/UdemyC/Chapter09_CharArrays/Extra_09/ScenePrint/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
-      "externalConsole": true,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

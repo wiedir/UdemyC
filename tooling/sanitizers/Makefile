@@ -9,4 +9,4 @@ build:
 	gcc $(FLAGS) Main.c -o Main
 
 run:
-	env ASAN_OPTIONS="detect_leaks=1" ./Main
+	env ASAN_OPTIONS="detect_leaks=1" ./Main.c

@@ -85,5 +85,7 @@
     "**/.vscode/**"
   ],
   "C_Cpp_Runner.debuggerPath": "C:/cygwin64/bin/gdb.exe",
-  "C_Cpp_Runner.cppCompilerPath": "C:/cygwin64/bin/g++.exe"
+  "C_Cpp_Runner.cppCompilerPath": "C:/cygwin64/bin/g++.exe",
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp_Runner.useMsvc": false
 }

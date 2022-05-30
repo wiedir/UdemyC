@@ -13,7 +13,7 @@ char *string_n_copy(char *dest, char *src, size_t count);
 int main()
 {
     char text[50] = "jan schaffranek";
-    char copy[50] = {'\0'};
+    char copy[50] = "Leerer Text";
 
     printf("string_starts_with 'jan': %d\n", string_starts_with(text, "jan"));
     printf("string_ends_with 'anek': %d\n", string_ends_with(text, "anek"));
@@ -21,8 +21,10 @@ int main()
     printf("string_starts_with 'an': %d\n", string_starts_with(text, "an"));
     printf("string_ends_with 'ane': %d\n", string_ends_with(text, "ane"));
 
-    printf("string_find_first_not_of: %s\n", string_find_first_not_of(text, "jan "));
-    printf("string_find_first_not_of: %s\n", string_find_first_not_of(text, "an "));
+    printf("string_find_first_not_of: %s\n", string_find_first_not_of(text, "jan sch"));
+    printf("string_find_first_not_of: %s\n", string_find_first_not_of(text, "an"));
+
+    printf("string_n_copy: %s\n", string_n_copy(copy, text, 8));
 
     return 0;
 }
@@ -35,18 +37,15 @@ bool string_starts_with(char *string, char *substr)
         return false;
     }
 
-    char *current_subchar = substr;
-    char *current_char = string;
-
-    while (*current_subchar != '\0')
+    while (*substr != '\0')
     {
-        if ((*current_char != *current_subchar) || (*current_char == '\0'))
+        if ((*string != *substr) || (*substr == '\0'))
         {
             return false;
         }
 
-        current_char++;
-        current_subchar++;
+        substr++;
+        string++;
     }
 
     return true;
@@ -59,37 +58,35 @@ bool string_ends_with(char *string, char *substr)
         return false;
     }
 
-    char *current_subchar = substr;
     int subi = 0;
-    char *current_char = string;
     int i = 0;
 
-    while (*current_subchar != '\0')
+    while (*substr != '\0')
     {
-        current_subchar++;
+        substr++;
         subi++;
     }
 
-    while (*current_char != '\0')
+    while (*string != '\0')
     {
-        current_char++;
+        string++;
         i++;
     }
 
-    current_subchar--;
+    substr--;
     subi--;
-    current_char--;
+    string--;
     i--;
 
     while (subi >= 0)
     {
-        if ((*current_char != *current_subchar) || (i < 0))
+        if ((*string != *substr) || (i < 0))
         {
             return false;
         }
 
-        current_subchar--;
-        current_char--;
+        substr--;
+        string--;
         i--;
         subi--;
     }
@@ -99,12 +96,43 @@ bool string_ends_with(char *string, char *substr)
 
 char *string_find_first_not_of(char *string, char *substr)
 {
-    bool is_in = string_starts_with(string, substr);
-
-    if (is_in)
+    if ((string == NULL) || (substr == NULL))
     {
-        return *string;
+        return false;
     }
 
-    return NULL;
+    while (*substr != '\0')
+    {
+        if ((*string != *substr) || (*string == '\0'))
+        {
+            return string;
+        }
+
+        string++;
+        substr++;
+    }
+
+    return string;
+}
+
+char *string_n_copy(char *dest, char *src, size_t count)
+{
+    if ((src == NULL) || (dest == NULL) || (count == 0))
+    {
+        return NULL;
+    }
+
+    char *result = dest;
+
+    size_t i = 0;
+
+    while ((*src != '\0') && (i < count))
+    {
+        *dest = *src;
+        dest++;
+        src++;
+        i++;
+    }
+
+    return result;
 }

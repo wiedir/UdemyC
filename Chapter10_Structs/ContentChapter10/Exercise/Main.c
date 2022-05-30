@@ -2,9 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Vector; // { }
+struct Vector
+{
+    int *data;
+    unsigned int length;
+};
 
-// typedef
+typedef struct Vector Vector;
 
 int *createArray(unsigned int length, int value)
 {
@@ -34,85 +38,87 @@ int *freeArray(int *array)
 }
 
 
-float meanArray(int *array, unsigned int length)
+float meanVector(Vector *vector)
 {
     int sum = 0;
 
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < vector->length; i++)
     {
-        sum += array[i];
+        sum += vector->data[i];
     }
 
-    return (float)(sum) / (float)(length);
+    return (float)(sum) / (float)(vector->length);
 }
 
-int minArray(int *array, unsigned int length)
+int minVector(Vector *vector)
 {
-    if (length == 0)
+    if (vector->length == 0)
     {
         return INT32_MIN;
     }
 
-    int current_min = array[0];
+    int current_min = vector->data[0];
 
-    for (unsigned int i = 1; i < length; i++)
+    for (unsigned int i = 1; i < vector->length; i++)
     {
-        if (array[i] < current_min)
+        if (vector->data[i] < current_min)
         {
-            current_min = array[i];
+            current_min = vector->data[i];
         }
     }
 
     return current_min;
 }
 
-int maxArray(int *array, unsigned int length)
+int maxVector(Vector *vector)
 {
-    if (length == 0)
+    if (vector->length == 0)
     {
         return INT32_MIN;
     }
 
-    int current_max = array[0];
+    int current_max = vector->data[0];
 
-    for (unsigned int i = 1; i < length; i++)
+    for (unsigned int i = 1; i < vector->length; i++)
     {
-        if (array[i] > current_max)
+        if (vector->data[i] > current_max)
         {
-            current_max = array[i];
+            current_max = vector->data[i];
         }
     }
 
     return current_max;
 }
 
-void printArray(int *array, unsigned int length)
+void printVector(Vector *vector)
 {
-    if (NULL == array)
+    if (NULL == vector->data)
     {
         return;
     }
 
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < vector->length; i++)
     {
-        printf("%d\n", array[i]);
+        printf("%d\n", vector->data[i]);
     }
 }
 
 int main()
 {
-    // Vector v1 = {.data = createArray(3, 1), .length = 3};
-    // v1.data[1] = 2;
+    Vector v1 = {.data = createArray(3, 1), .length = 3};
+    v1.data[0] = -10;
+    v1.data[1] = 2;
+    v1.data[2] = 100;
 
-    // printVector(&v1);
+    printVector(&v1);
 
-    // int max_v1 = maxVector(&v1);
-    // int min_v1 = minVector(&v1);
-    // float mean_v1 = meanVector(&v1);
+    int max_v1 = maxVector(&v1);
+    int min_v1 = minVector(&v1);
+    float mean_v1 = meanVector(&v1);
 
-    // printf("Max: %d\n", max_v1);
-    // printf("Min: %d\n", min_v1);
-    // printf("Mean: %f\n", mean_v1);
+    printf("Max: %d\n", max_v1);
+    printf("Min: %d\n", min_v1);
+    printf("Mean: %f\n", mean_v1);
 
     return 0;
 }
