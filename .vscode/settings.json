@@ -16,7 +16,8 @@
   "explorer.confirmDelete": false,
   "files.autoSave": "onFocusChange",
   "files.associations": {
-    ".clang*": "yaml"
+    ".clang*": "yaml",
+    "stdbool.h": "c"
   },
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
