@@ -117,14 +117,14 @@ void init_vehicle(VehicleType *vehicle,
 
 void init_vehicles(NeighborVehiclesType *vehicles)
 {
-    init_vehicle(&vehicles->vehicles_left_lane[0], 0, 50, 20, LANE_ASSOCIATION_TYPE_LEFT);
-    init_vehicle(&vehicles->vehicles_left_lane[1], 1, 100, -20, LANE_ASSOCIATION_TYPE_LEFT);
+    init_vehicle(&vehicles->vehicles_left_lane[0], 0, 130, 40, LANE_ASSOCIATION_TYPE_LEFT);
+    init_vehicle(&vehicles->vehicles_left_lane[1], 1, 130, -20, LANE_ASSOCIATION_TYPE_LEFT);
 
-    init_vehicle(&vehicles->vehicles_center_lane[0], 2, 150, 40, LANE_ASSOCIATION_TYPE_CENTER);
-    init_vehicle(&vehicles->vehicles_center_lane[1], 3, 120, -60, LANE_ASSOCIATION_TYPE_CENTER);
+    init_vehicle(&vehicles->vehicles_center_lane[0], 2, 140, 40, LANE_ASSOCIATION_TYPE_CENTER);
+    init_vehicle(&vehicles->vehicles_center_lane[1], 3, 140, -60, LANE_ASSOCIATION_TYPE_CENTER);
 
-    init_vehicle(&vehicles->vehicles_right_lane[0], 4, 200, 60, LANE_ASSOCIATION_TYPE_RIGHT);
-    init_vehicle(&vehicles->vehicles_right_lane[1], 5, 80, -80, LANE_ASSOCIATION_TYPE_RIGHT);
+    init_vehicle(&vehicles->vehicles_right_lane[0], 4, 120, 60, LANE_ASSOCIATION_TYPE_RIGHT);
+    init_vehicle(&vehicles->vehicles_right_lane[1], 5, 140, -80, LANE_ASSOCIATION_TYPE_RIGHT);
 }
 
 
