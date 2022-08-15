@@ -1,3 +1,4 @@
+#include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -129,6 +130,76 @@ void init_vehicles(NeighborVehiclesType *vehicles)
 
     init_vehicle(&vehicles->vehicles_right_lane[0], 4, 90, 80, LANE_ASSOCIATION_TYPE_RIGHT);
     init_vehicle(&vehicles->vehicles_right_lane[1], 5, 90, -40, LANE_ASSOCIATION_TYPE_RIGHT);
+}
+
+
+const VehicleType *get_vehicle_array(const LaneAssociationType ego_lane, const NeighborVehiclesType *vehicles)
+{
+    switch (ego_lane)
+    {
+    case LANE_ASSOCIATION_TYPE_LEFT:
+    {
+        return vehicles->vehicles_left_lane;
+        break;
+    }
+    case LANE_ASSOCIATION_TYPE_CENTER:
+    {
+        return vehicles->vehicles_center_lane;
+        break;
+    }
+    case LANE_ASSOCIATION_TYPE_RIGHT:
+    {
+        return vehicles->vehicles_right_lane;
+        break;
+    }
+    case LANE_ASSOCIATION_TYPE_NONE:
+    default:
+    {
+        return NULL;
+    }
+    }
+}
+
+
+LaneAssociationType get_lane_change_request(const VehicleType *ego_vehicle, const NeighborVehiclesType *vehicles)
+{
+    const VehicleType *ego_lane_vehicles = get_vehicle_array(ego_vehicle->lane, vehicles);
+    const VehicleType *rear_vehicle = &ego_lane_vehicles[1];
+
+    const float min_distance_m = mps_to_kph(ego_vehicle->speed_mps) * 0.2f;
+    const float rear_distance_m = fabs(rear_vehicle->distance_m);
+
+    if (rear_distance_m < min_distance_m)
+    {
+        switch (ego_vehicle->lane)
+        {
+        case LANE_ASSOCIATION_TYPE_LEFT:
+        {
+            const VehicleType *ego_lane_vehicles = get_vehicle_array(ego_vehicle->lane, vehicles);
+            break;
+        }
+        case LANE_ASSOCIATION_TYPE_CENTER:
+        {
+            break;
+        }
+        case LANE_ASSOCIATION_TYPE_RIGHT:
+        {
+            break;
+        }
+        case LANE_ASSOCIATION_TYPE_NONE:
+        default:
+        {
+            break;
+        }
+        }
+    }
+}
+
+
+bool lateral_control(const NeighborVehiclesType *vehicles,
+                     const LaneAssociationType lane_change_request,
+                     VehicleType *ego_vehicle)
+{
 }
 
 

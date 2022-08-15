@@ -8,13 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-<<<<<<< HEAD
-      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter10_Structs/Extra_10/Simulation",
-      "program": "t:/C_C++/Udemy/UdemyC/Chapter10_Structs/Extra_10/Simulation/build/Debug/outDebug",
-=======
-      "cwd": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter10_Structs/Extra_10/LongitudinalController",
-      "program": "c:/Users/dwieberneit/Documents/Programs/UdemyC/Chapter10_Structs/Extra_10/LongitudinalController/build/Debug/outDebug",
->>>>>>> 2a7645344dfdf64a5a2aaa0eb0a7e518af6c90aa
+      "cwd": "t:/C_C++/Udemy/UdemyC/Chapter10_Structs/Extra_10/LateralController",
+      "program": "t:/C_C++/Udemy/UdemyC/Chapter10_Structs/Extra_10/LateralController/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
       "setupCommands": [

@@ -20,6 +20,14 @@ void init_vehicle(VehicleType *vehicle,
 
 void init_vehicles(NeighborVehiclesType *vehicles);
 
+const VehicleType *get_vehicle_array(const LaneAssociationType ego_lane, const NeighborVehiclesType *vehicles);
+
+LaneAssociationType get_lane_change_request(const VehicleType *ego_vehicle, const NeighborVehiclesType *vehicles);
+
+bool lateral_control(const NeighborVehiclesType *vehicles,
+                     const LaneAssociationType lane_change_request,
+                     VehicleType *ego_vehicle);
+
 void print_vehicle(const VehicleType *vehicle);
 
 void print_neighbor_vehicles(const NeighborVehiclesType *vehicles);
